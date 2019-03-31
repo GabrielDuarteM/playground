@@ -1,11 +1,1 @@
-module.exports = {
-  analyzeCommits: {
-    releaseRules: [
-      {
-        type: "docs",
-        scope: "README",
-        release: "patch"
-      }
-    ]
-  }
-};
+module.exports = require("./semantic-release/semantic-release");
