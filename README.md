@@ -1,3 +1,3 @@
 # playground
 
-hey 2
+we now console.log("hey")
