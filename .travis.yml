@@ -10,4 +10,4 @@ jobs:
       node_js: node
       script:
         - yarn build
-        # - yarn release
+        - yarn release
