@@ -4,5 +4,14 @@
   "main": "index.js",
   "repository": "https://github.com/GabrielDuarteM/playground.git",
   "author": "Gabriel Duarte <gabrielqduarte@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "ci": "echo 'Ran CI Script successfully'",
+    "build": "echo 'Ran CI Script successfully'",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "gd-configs": "6.0.0",
+    "semantic-release": "15.13.3"
+  }
 }
