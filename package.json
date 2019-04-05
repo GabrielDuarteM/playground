@@ -15,7 +15,7 @@
     "semantic-release": "15.13.3"
   },
   "dependencies": {
-    "react": "15",
+    "react": "16",
     "typescript": "2"
   }
 }
