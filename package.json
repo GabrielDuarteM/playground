@@ -13,5 +13,9 @@
   "devDependencies": {
     "gd-configs": "6.0.0",
     "semantic-release": "15.13.3"
+  },
+  "dependencies": {
+    "react": "15",
+    "typescript": "2"
   }
 }
