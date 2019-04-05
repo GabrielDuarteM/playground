@@ -11,7 +11,7 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "gd-configs": "6.0.0",
+    "gd-configs": "6.0.2",
     "semantic-release": "15.13.3"
   },
   "dependencies": {}
