@@ -1,5 +1,3 @@
 # playground
 
-we now console.log("hey")
-some fixes
-some features
+Nothing to see here, just some tests.
