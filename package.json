@@ -1,13 +1,13 @@
 {
   "name": "@gabrielduartem/playground",
-  "version": "0.0.0-gduarte.0",
+  "version": "0.0.0-development",
   "main": "index.js",
   "repository": "https://github.com/GabrielDuarteM/playground.git",
   "author": "Gabriel Duarte <gabrielqduarte@gmail.com>",
   "license": "MIT",
   "scripts": {
     "ci": "echo 'Ran CI Script successfully'",
-    "build": "echo 'Ran CI Script successfully'",
+    "build": "rm -rf dist && mkdir dist && cp manifest.json dist/",
     "release": "semantic-release"
   },
   "devDependencies": {
