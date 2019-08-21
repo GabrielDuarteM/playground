@@ -26,16 +26,15 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10
-      - run: echo thing
-      - run: echo $GITHUB_TOKEN
+      - run: npm install -g yarn
+      - run: yarn
+      - run: yarn build
+      - run: npx semantic-release@^15
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo $TOKEN_TEST
-      - run: echo $DIRECT_TOKEN
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
           TOKEN_TEST: ${{ secrets.TOKEN_TEST }}
-          DIRECT_TOKEN: directToken
 #      - run: npm install -g yarn
 #      - run: yarn
 #      - run: yarn build
