@@ -32,4 +32,5 @@ jobs:
       - run: npm install -g yarn
       - run: yarn
       - run: yarn build
+      - run: echo $GITHUB_TOKEN
       - run: npx semantic-release@^15
