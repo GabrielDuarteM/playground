@@ -30,7 +30,7 @@ jobs:
       - run: echo $GITHUB_TOKEN
       - run: echo $TOKEN_TEST
       - run: echo $DIRECT_TOKEN
-      env:
+        env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
           TOKEN_TEST: ${{ secrets.TOKEN_TEST }}
           DIRECT_TOKEN: directToken
