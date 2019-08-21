@@ -2,6 +2,7 @@ language: node_js
 cache: yarn
 node_js:
   - node
+  - lts/*
 script: yarn ci
 jobs:
   include:

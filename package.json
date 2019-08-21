@@ -1,19 +1,30 @@
 {
   "name": "@gabrielduartem/playground",
   "version": "0.0.0-development",
-  "main": "index.js",
-  "repository": "https://github.com/GabrielDuarteM/playground.git",
-  "author": "Gabriel Duarte <gabrielqduarte@gmail.com>",
+  "author": "Gabriel Duarte (https://www.gabrielduarte.tech)",
   "license": "MIT",
+  "description": "",
   "scripts": {
-    "ci": "echo 'Ran CI Script successfully'",
-    "build": "rm -rf dist && mkdir dist && cp manifest.json dist/",
-    "release": "semantic-release"
+    "start": "gd-scripts start",
+    "build": "gd-scripts build",
+    "ci": "gd-scripts ci",
+    "lint": "gd-scripts lint",
+    "typecheck": "gd-scripts typecheck"
   },
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GabrielDuarteM/playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GabrielDuarteM/playground/issues"
+  },
+  "homepage": "https://github.com/GabrielDuarteM/playground#readme",
   "devDependencies": {
-    "gd-configs": "6.0.0",
-    "semantic-release": "15.13.3",
-    "semantic-release-chrome": "1.2.0-beta.2"
-  },
-  "dependencies": {}
+    "@types/node": "12.7.2",
+    "gd-scripts": "5.0.8"
+  }
 }
