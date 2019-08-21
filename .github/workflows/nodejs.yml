@@ -3,25 +3,24 @@ name: Node CI
 on: [push]
 
 jobs:
-  build:
-
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: [8, 10]
-        os: [ubuntu-latest, macOS-latest]
-    steps:
-    - uses: actions/setup-node@v1
-    - uses: actions/checkout@v1
-      with:
-        node-version: ${{ matrix.node }}
-    - run: npm install -g yarn
-    - run: yarn
-    - run: yarn ci
-    - run: yarn build
-    - run: sh -c 'exit 1'
-  publish:
-    - run: yarn ci
+  - build:
+     runs-on: ${{ matrix.os }}
+     strategy:
+       matrix:
+         node: [8, 10]
+         os: [ubuntu-latest, macOS-latest]
+     steps:
+     - uses: actions/setup-node@v1
+     - uses: actions/checkout@v1
+       with:
+         node-version: ${{ matrix.node }}
+     - run: npm install -g yarn
+     - run: yarn
+     - run: yarn ci
+     - run: yarn build
+     - run: sh -c 'exit 1'
+  - publish:
+     - run: yarn ci
 
     #steps:
 #    - uses: actions/checkout@v1
