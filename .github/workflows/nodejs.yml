@@ -3,23 +3,23 @@ name: Node CI
 on: [push]
 
 jobs:
-#  build:
-#    runs-on: ${{ matrix.os }}
-#    strategy:
-#      matrix:
-#        node: [10]
-#        os: [ubuntu-latest]
-#    steps:
-#      - uses: actions/setup-node@v1
-#      - uses: actions/checkout@v1
-#        with:
-#          node-version: ${{ matrix.node }}
-#      - run: npm install -g yarn
-#      - run: yarn
-#      - run: yarn ci
-#      - run: yarn build
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: [8, 10]
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install -g yarn
+      - run: yarn
+      - run: yarn ci
+      - run: yarn build
   publish:
-#    needs: build
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -29,14 +29,7 @@ jobs:
       - run: npm install -g yarn
       - run: yarn
       - run: yarn build
-#      - run: npx semantic-release@^15
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo $TOKEN_TEST
+      - run: npx semantic-release@^15
         env:
-          TOKEN_TEST: ${{ secrets.TOKEN_TEST }}
-#      - run: npm install -g yarn
-#      - run: yarn
-#      - run: yarn build
-#      - run: echo $GITHUB_TOKEN
-#      - run: npx semantic-release@^15
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
