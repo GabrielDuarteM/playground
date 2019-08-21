@@ -29,9 +29,9 @@ jobs:
       - run: npm install -g yarn
       - run: yarn
       - run: yarn build
-      - run: npx semantic-release@^15
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - run: npx semantic-release@^15
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo $TOKEN_TEST
         env:
           TOKEN_TEST: ${{ secrets.TOKEN_TEST }}
