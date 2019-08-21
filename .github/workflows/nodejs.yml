@@ -7,8 +7,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: [8, 10]
-        os: [ubuntu-latest, macOS-latest]
+        node: [10]
+        os: [ubuntu-latest]
     steps:
       - uses: actions/setup-node@v1
       - uses: actions/checkout@v1
@@ -29,8 +29,14 @@ jobs:
           registry-url: https://registry.npmjs.org/
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
-      - run: npm install -g yarn
-      - run: yarn
-      - run: yarn build
+          TOKEN_TEST: ${{ secrets.TOKEN_TEST }}
+          DIRECT_TOKEN: directToken
+      - run: echo thing
       - run: echo $GITHUB_TOKEN
-      - run: npx semantic-release@^15
+      - run: echo $TOKEN_TEST
+      - run: echo $DIRECT_TOKEN
+#      - run: npm install -g yarn
+#      - run: yarn
+#      - run: yarn build
+#      - run: echo $GITHUB_TOKEN
+#      - run: npx semantic-release@^15
