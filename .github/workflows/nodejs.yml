@@ -31,4 +31,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm install -g yarn
       - run: yarn
+      - run: yarn build
       - run: npx semantic-release@^15
