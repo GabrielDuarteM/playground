@@ -13,7 +13,7 @@
   "devDependencies": {
     "gd-configs": "6.0.0",
     "semantic-release": "15.13.3",
-    "semantic-release-chrome": "1.2.0-beta.2"
+    "semantic-release-chrome": "0.0.0-development.beta-3"
   },
   "dependencies": {}
 }

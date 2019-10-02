@@ -3994,10 +3994,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-chrome@1.2.0-beta.2:
-  version "1.2.0-beta.2"
-  resolved "https://registry.yarnpkg.com/semantic-release-chrome/-/semantic-release-chrome-1.2.0-beta.2.tgz#276e78d3e5d55a2f148c7d40fa7f135a83e39b4a"
-  integrity sha512-UnOzybIlLhd93zz791LY70SsG/acVx9WadxYWMycLklBgkym4Dt9fI+7wk/Ajydnw8ako5l0DmcUvfA+hTrHmA==
+semantic-release-chrome@0.0.0-development.beta-3:
+  version "0.0.0-development.beta-3"
+  resolved "https://registry.yarnpkg.com/semantic-release-chrome/-/semantic-release-chrome-0.0.0-development.beta-3.tgz#d1943e25d69a61a219f3a96db5666525da68c563"
+  integrity sha512-x9PPQ7MluerGdwecQJdfARr1V9+j2nsBguhjGUCdXrg35w/BOXEcbgZfUM/oqPoNfR/1qdJ2M0EOJXnoEahYQA==
   dependencies:
     "@semantic-release/error" "2.2.0"
     aggregate-error "3.0.0"
