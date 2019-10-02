@@ -1,5 +1,6 @@
 module.exports = {
   verifyConditions: ["semantic-release-chrome", "@semantic-release/github"],
+  branch: 'semantic-release-chrome-test',
   prepare: [
     {
       path: "semantic-release-chrome",
