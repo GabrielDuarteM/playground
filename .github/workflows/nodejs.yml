@@ -22,14 +22,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Echo versions used
-      run: echo "Node:" && node --version && echo "npm:" && npm --version && echo "yarn:" && yarn --version
+    # - name: Echo versions used
+    #   run: echo "Node:" && node --version && echo "npm:" && npm --version && echo "yarn:" && yarn --version
 
-    - name: Install dependencies
-      run: yarn install
+    # - name: Install dependencies
+    #   run: yarn install
 
-    - name: Run CI script
-      run: yarn run ci
+    # - name: Run CI script
+    #   run: yarn run ci
 
     - name: Run node script
       run: node ./console.js
