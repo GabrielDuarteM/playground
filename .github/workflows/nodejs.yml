@@ -36,7 +36,7 @@ jobs:
 
     needs: build
 
-    if: ${GITHUB_REF:11} == 'actions'
+    if: github.ref == 'refs/heads/actions'
 
     steps:
     - name: Checkout code
