@@ -8,15 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [8, lts, latest]
+        node-version: [8, lts, latest]
     steps:
-      - uses: actions/setup-node@v1
       - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ matrix.node-version }}
       - run: node --version
       - run: yarn install
       - run: yarn run ci
+      - run: echo $CI
+        env: 
+          CI: true
 
   # publish:
   #   needs: build
