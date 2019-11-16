@@ -55,7 +55,7 @@ jobs:
       run: yarn run build
 
     - name: Branch name
-      run: echo ${{ github.ref }}
+      run: echo ${GITHUB_REF:11}
 
 # name: Node CI
 
