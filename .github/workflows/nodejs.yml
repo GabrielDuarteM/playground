@@ -36,6 +36,8 @@ jobs:
 
     needs: build
 
+    if: ${GITHUB_REF:11} == 'actions'
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v1
@@ -53,9 +55,6 @@ jobs:
 
     - name: Run build
       run: yarn run build
-
-    - name: Branch name
-      run: echo ${GITHUB_REF:11}
 
 # name: Node CI
 
