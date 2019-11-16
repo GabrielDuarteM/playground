@@ -23,7 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Echo versions used
-      run: node --version && npm --version && yarn --version
+      run: echo "Node:" && node --version && echo "npm:" && npm --version && echo "yarn:" && yarn --version
 
     - name: Install dependencies
       run: yarn install
@@ -37,8 +37,25 @@ jobs:
     needs: build
 
     steps:
-      - name: ls
-        run: ls
+    - name: Checkout code
+      uses: actions/checkout@v1
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 13.x
+
+    - name: Echo versions used
+      run: echo "Node:" && node --version && echo "npm:" && npm --version && echo "yarn:" && yarn --version
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Run build
+      run: yarn run build
+
+    - name: ls
+      run: ls
 
 
 # name: Node CI
