@@ -5,34 +5,30 @@ on: [push]
 jobs:
 
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [8, 10]
-        os: [ubuntu-latest, macos-latest]
+        node: [8, latest]
     steps:
       - uses: actions/setup-node@v1
       - uses: actions/checkout@v1
         with:
           node-version: ${{ matrix.node }}
-      - run: npm install -g yarn
-      - run: yarn
-      - run: yarn ci
-      - run: yarn build
+      - run: yarn install
+      - run: yarn run ci
 
-
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 10
-      - run: npm install -g yarn
-      - run: yarn
-      - run: yarn build
-      - run: npx semantic-release@^15
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  # publish:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 10
+  #     - run: npm install -g yarn
+  #     - run: yarn
+  #     - run: yarn build
+  #     - run: npx semantic-release@^15
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
