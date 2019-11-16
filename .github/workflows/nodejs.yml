@@ -19,8 +19,8 @@ jobs:
       - run: yarn install
       - run: yarn run ci
       - run: echo $CI
-        env: 
-          CI: true
+        # env:
+        #   CI: true
 
   # publish:
   #   needs: build
