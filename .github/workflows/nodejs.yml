@@ -36,7 +36,7 @@ jobs:
 
     needs: build
 
-    if: (github.ref == 'refs/heads/master' && env.skip_release != "true")
+    if: (github.ref == 'refs/heads/master' && ${SKIP_RELEASE} != "true")
 
     steps:
     - name: Checkout code
