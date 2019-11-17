@@ -36,7 +36,7 @@ jobs:
 
     needs: build
 
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' && env.skip_release != "true"
 
     steps:
     - name: Checkout code
@@ -61,4 +61,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
