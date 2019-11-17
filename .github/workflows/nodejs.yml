@@ -36,7 +36,7 @@ jobs:
 
     needs: build
 
-    if: (github.ref == 'refs/heads/master' && secrets.SKIP_RELEASE != "true")
+    if: secrets.SKIP_RELEASE != "true"
 
     steps:
     - name: Checkout code
