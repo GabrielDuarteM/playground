@@ -7,7 +7,7 @@ on:
 jobs:
   ondemand:
     runs-on: ubuntu-latest
-    if: github.event.comment.body == 'Trigger CI' && github.event.comment.user.login == 'GabrielDuarteMx'
+    if: github.event.comment.body == 'Trigger CI' && github.event.comment.user.login == 'GabrielDuarteM'
 
     steps:
       - name: Hello world
