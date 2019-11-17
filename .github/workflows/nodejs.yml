@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [push, pull_request, repository_dispatch]
 
 env:
   CI: true
